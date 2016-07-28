@@ -5,6 +5,7 @@ import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
@@ -20,6 +21,8 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
+import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
@@ -27,7 +30,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "com.lviv.taras")
+@ComponentScan("com.lviv.taras")
 @PropertySource(value = {"classpath:application.properties"})
 public class AppConfig {
 
@@ -36,6 +39,19 @@ public class AppConfig {
 
     @Value("${init-db:false}")
     private String initDatabase;
+
+    @Bean
+    public TilesViewResolver viewResolver() {
+        TilesViewResolver viewResolver = new TilesViewResolver();
+        return viewResolver;
+    }
+
+    @Bean
+    public TilesConfigurer tilesConfigurer() {
+        TilesConfigurer tilesConfigurer = new TilesConfigurer();
+        tilesConfigurer.setDefinitions("/WEB-INF/template/tiles.xml");
+        return tilesConfigurer;
+    }
 
     @Bean
     public static PropertySourcesPlaceholderConfigurer placeHolderConfigurer() {
@@ -79,7 +95,6 @@ public class AppConfig {
         dataSource.setPassword(environment.getProperty("jdbc.password"));
         return dataSource;
     }
-
 
     @Bean
     public DataSourceInitializer dataSourceInitializer(DataSource dataSource) {

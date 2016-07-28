@@ -1,16 +1,21 @@
 package com.lviv.taras.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.lviv.taras.entity.User;
+import com.lviv.taras.repository.UserRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserService {
 
-//    private UserDao userDao;
-//
-//    @Autowired
-//    public UserService(UserDao dao) {
-//        this.userDao = dao;
-//    }
+    private UserRepository userRepository;
 
+    public List<User> findAll() {
+        return userRepository.findAll();
+    }
+
+    public void save(User user) {
+        userRepository.save(user);
+    }
 }
