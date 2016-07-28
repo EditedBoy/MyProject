@@ -30,22 +30,48 @@
                 </configuration>
             </plugin>
             <!-- /Tomcat -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
 
     <dependencies>
 
+        <!-- Spring MVC -->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <artifactId>spring-web</artifactId>
+            <version>4.3.0.RELEASE</version>
         </dependency>
+        <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+            <version>4.3.0.RELEASE</version>
+        </dependency>
+        <!-- /Spring MVC -->
+
+        <!-- Spring ORM -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>4.3.0.RELEASE</version>
+        </dependency>
+        <!-- /Spring ORM -->
+
+        <!-- Spring JPA repository -->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
             <version>1.9.2.RELEASE</version>
         </dependency>
+        <!-- /Spring JPA repository -->
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
@@ -85,12 +111,6 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
             <version>4.3.11.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.thymeleaf</groupId>
