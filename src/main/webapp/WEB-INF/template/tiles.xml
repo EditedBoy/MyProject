@@ -30,10 +30,6 @@
     <definition name="authorization" extends="template">
         <put-attribute name="body" value="/WEB-INF/views/anonymous/authorization.jsp"/>
     </definition>
-
-    <definition name="registration" extends="template">
-        <put-attribute name="body" value="/WEB-INF/views/anonymous/registration.jsp"/>
-    </definition>
     <!-- /Anonymous -->
 
 
