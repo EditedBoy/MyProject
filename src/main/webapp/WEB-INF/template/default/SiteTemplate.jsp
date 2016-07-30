@@ -14,6 +14,8 @@
 
         <link rel="stylesheet" href="resources/template/css/normalize.css">
         <link rel="stylesheet" href="resources/template/css/style.css">
+
+        <link rel="stylesheet" href="resources/default/css/button-styles.css">
     </head>
 
     <body>

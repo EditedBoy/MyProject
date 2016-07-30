@@ -32,6 +32,7 @@ import java.util.Properties;
 @EnableTransactionManagement
 @ComponentScan("com.lviv.taras")
 @PropertySource(value = {"classpath:application.properties"})
+@EnableJpaRepositories(basePackages = "com.lviv.taras.repository")
 public class AppConfig {
 
     @Autowired

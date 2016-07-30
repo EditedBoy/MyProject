@@ -1,3 +1,3 @@
-insert into user(id, name) values(1,'Siva');
-insert into user(id, name) values(2,'Prasad');
-insert into user(id, name) values(3,'Reddy');
+insert into user(id, email, password) values(1,'taras', 'taras');
+insert into user(id, email, password) values(2,'admin', 'admin');
+insert into user(id, email, password) values(3,'user', 'user');

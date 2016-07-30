@@ -14,9 +14,28 @@
     </definition>
 
 
+    <!-- Anonymous -->
     <definition name="home" extends="template">
-        <put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/anonymous/home.jsp"/>
     </definition>
+
+    <definition name="about" extends="template">
+        <put-attribute name="body" value="/WEB-INF/views/anonymous/about.jsp"/>
+    </definition>
+
+    <definition name="contact-us" extends="template">
+        <put-attribute name="body" value="/WEB-INF/views/anonymous/contact-us.jsp"/>
+    </definition>
+
+    <definition name="authorization" extends="template">
+        <put-attribute name="body" value="/WEB-INF/views/anonymous/authorization.jsp"/>
+    </definition>
+
+    <definition name="registration" extends="template">
+        <put-attribute name="body" value="/WEB-INF/views/anonymous/registration.jsp"/>
+    </definition>
+    <!-- /Anonymous -->
+
 
     <definition name="add-user" extends="template">
         <put-attribute name="body" value="/WEB-INF/views/add-user.jsp"/>

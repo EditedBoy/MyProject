@@ -1,8 +1,7 @@
 package com.lviv.taras.controller;
 
-import com.lviv.taras.dto.UserDto;
 import com.lviv.taras.entity.User;
-import com.lviv.taras.service.UserService;
+import com.lviv.taras.service.abstraction.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,9 +20,10 @@ public class TestController {
     }
 
     @RequestMapping(value = "/add-user", method = RequestMethod.POST)
-    public String saveUser(@RequestBody String user) {
-        System.out.println(user);
-//        userService.save(user);
-        return "redirect:/" + "";
+    public String saveUser(@RequestBody User user) {//String user
+        System.out.println(user.toString());
+
+        this.userService.save(user);
+        return  "index";//"redirect:/"
     }
 }

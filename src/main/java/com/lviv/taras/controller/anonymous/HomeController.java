@@ -1,4 +1,4 @@
-package com.lviv.taras.controller;
+package com.lviv.taras.controller.anonymous;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String home() {
+    public String openHomePage() {
+        System.out.println("Home page");
         return "home";
     }
 }

@@ -1,0 +1,53 @@
+.button{
+    border-radius: 12px;
+    box-shadow: 2px 2px 1px grey;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.button:hover {
+    color: rgb(0, 128, 43);
+}
+
+.button-add {
+    height: 40px;
+    width: 120px;
+    background-color: rgb(51, 153, 255);
+}
+.button-confirm{
+    margin: 10px;
+    height: 45px;
+    width: 85px;
+    background-color: rgb(71, 71, 107);
+}
+.button-cancel{
+    margin: 10px;
+    height: 50px;
+    width: 90px;
+    background-color: rgb(255, 112, 77);
+}
+
+.delete:before {
+    color: red;
+    content: "\2718";
+}
+.save:before   {
+    color: green;
+    content: "\2714";
+}
+.edit:before   {
+    color: blue;
+    content: "\270E";
+}
+.add:before    { content: "\271A"; }
+.delete:before { content: "\2718";}
+.cross:before  { content: "\2716"; }
