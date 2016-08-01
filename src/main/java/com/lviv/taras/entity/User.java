@@ -1,5 +1,6 @@
 package com.lviv.taras.entity;
 
+import com.lviv.taras.entity.enums.UserRoleEnum;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,4 +27,7 @@ public class User {
 
     @Column(nullable = true)
     private String password;
+
+    @Column(nullable = true)
+    private UserRoleEnum role;
 }

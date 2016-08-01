@@ -31,7 +31,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @ComponentScan("com.lviv.taras")
-@PropertySource(value = {"classpath:application.properties"})
+@PropertySource(value = {"classpath:hibernate.properties"})
 @EnableJpaRepositories(basePackages = "com.lviv.taras.repository")
 public class AppConfig {
 
@@ -80,11 +80,6 @@ public class AppConfig {
         factory.afterPropertiesSet();
         factory.setLoadTimeWeaver(new InstrumentationLoadTimeWeaver());
         return factory;
-    }
-
-    @Bean
-    public HibernateExceptionTranslator hibernateExceptionTranslator() {
-        return new HibernateExceptionTranslator();
     }
 
     @Bean

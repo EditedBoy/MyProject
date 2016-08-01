@@ -1,5 +1,11 @@
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 
 <link rel="stylesheet" href="resources/default/css/registration-form.css">
+
 
 <body>
 
@@ -20,16 +26,17 @@
             <!--#login.form-action-->
             <div id="login" class="form-action show">
                 <h1>Login</h1>
-                <form id="loginUser">
+                <c:url value="/j_spring_security_check" var="loginUrl" />
+                <form method="post" id="loginForm">
                     <ul>
                         <li>
-                            <input type="text" name="email" placeholder="Email" />
+                            <input type="text" name="j_username" placeholder="Email" />
                         </li>
                         <li>
-                            <input type="password" name="password" placeholder="Password" />
+                            <input type="password" name="j_password" placeholder="Password" />
                         </li>
                         <li>
-                            <input type="submit" value="Login" class="button" />
+                            <input type="submit" formaction="${loginUrl}" value="Login" class="button" />
                         </li>
                     </ul>
                 </form>
@@ -65,7 +72,7 @@
                             <input type="text" name="email" placeholder="Email" />
                         </li>
                         <li>
-                            <input type="submit" value="Send" class="button" />
+                            <input type="submit"  value="Send" class="button" />
                         </li>
                     </ul>
                 </form>

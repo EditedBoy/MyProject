@@ -14,32 +14,28 @@
     </definition>
 
 
-    <!-- Anonymous -->
+    <!-- Common -->
     <definition name="home" extends="template">
-        <put-attribute name="body" value="/WEB-INF/views/anonymous/home.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/common/home.jsp"/>
     </definition>
 
     <definition name="about" extends="template">
-        <put-attribute name="body" value="/WEB-INF/views/anonymous/about.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/common/about.jsp"/>
     </definition>
 
     <definition name="contact-us" extends="template">
-        <put-attribute name="body" value="/WEB-INF/views/anonymous/contact-us.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/common/contact-us.jsp"/>
     </definition>
+    <!-- /Common -->
 
+    <!-- Anonymous -->
     <definition name="authorization" extends="template">
         <put-attribute name="body" value="/WEB-INF/views/anonymous/authorization.jsp"/>
     </definition>
+
+    <definition name="login" extends="template">
+        <put-attribute name="body" value="/WEB-INF/views/anonymous/login.jsp"/>
+    </definition>
     <!-- /Anonymous -->
-
-
-    <definition name="add-user" extends="template">
-        <put-attribute name="body" value="/WEB-INF/views/add-user.jsp"/>
-    </definition>
-
-    <definition name="index" extends="template">
-        <put-attribute name="index" value="Home" />
-        <put-attribute name="body" value="/WEB-INF/views/index.jsp"/>
-    </definition>
 
 </tiles-definitions>

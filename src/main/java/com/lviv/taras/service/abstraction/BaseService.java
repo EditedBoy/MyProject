@@ -8,4 +8,7 @@ public interface BaseService<T> {
     List<T> findAll();
 
     void save(T user);
+
+    T getOne(Long id);
+
 }
