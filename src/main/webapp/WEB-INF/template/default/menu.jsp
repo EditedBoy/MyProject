@@ -25,6 +25,8 @@
 
         <sec:authorize access="isAuthenticated()">
         <ul id="main-menu">
+
+            <sec:authorize access="hasAuthority('USER')">
             <li>
                 <a href="<c:url value="/" />"><i class="fa fa-home"></i>Home</a>
             </li>
@@ -34,6 +36,20 @@
             <li>
                 <a href="<c:url value="/contact-us" />" ><i class="fa fa-comment"></i>Contact Us</a>
             </li>
+            <li>
+                <a href="<c:url value="/chatMy" />" role="button"><i class=""></i>ChatMy</a>
+            </li>
+            <li>
+                <a href="<c:url value="/chat" />" role="button"><i class=""></i>Chat</a>
+            </li>
+            </sec:authorize>
+
+            <sec:authorize access="hasAuthority('ADMINISTRATOR')">
+            <li>
+                <a href="<c:url value="/user-list" />" role="button"><i class=""></i>All users</a>
+            </li>
+            </sec:authorize>
+
             <li>
                 <a href="<c:url value="/logout" />" role="button"><i class="fa fa-reply-all"></i>Logout</a>
             </li>

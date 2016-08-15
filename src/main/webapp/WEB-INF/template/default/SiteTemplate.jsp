@@ -8,7 +8,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Taras</title>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+
         <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
         <link href="http://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -17,6 +26,10 @@
         <link rel="stylesheet" type="text/css" href="resources/template/css/style.css">
 
         <link rel="stylesheet" type="text/css" href="resources/default/css/button-styles.css">
+
+        <script src="http://code.angularjs.org/1.0.5/angular.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
     </head>
 
     <body>
@@ -29,3 +42,4 @@
         <script src="resources/template/js/index.js"></script>
     </body>
 </html>
+

@@ -2,7 +2,16 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
+
+a:link {
+    text-decoration: none;
+}
+
 
 ul:after, header:after, #main:after {
   clear: both;

@@ -7,10 +7,10 @@
 
     <definition name="template" template="/WEB-INF/template/default/SiteTemplate.jsp">
         <put-attribute name="title" value="Home"/>
-        <put-attribute name="header" value="/WEB-INF/template/default/header.jsp" />
-        <put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp" />
-        <put-attribute name="body" value="" />
-        <put-attribute name="footer" value="/WEB-INF/template/default/footer.jsp" />
+        <put-attribute name="header" value="/WEB-INF/template/default/header.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp"/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/template/default/footer.jsp"/>
     </definition>
 
 
@@ -32,10 +32,21 @@
     <definition name="authorization" extends="template">
         <put-attribute name="body" value="/WEB-INF/views/anonymous/authorization.jsp"/>
     </definition>
-
-    <definition name="login" extends="template">
-        <put-attribute name="body" value="/WEB-INF/views/anonymous/login.jsp"/>
-    </definition>
     <!-- /Anonymous -->
+
+
+    <!-- Admin -->
+    <definition name="user-list" extends="template">
+        <put-attribute name="body" value="/WEB-INF/views/admin/user-list.jsp"/>
+    </definition>
+
+    <definition name="chatMy" extends="template">
+        <put-attribute name="body" value="/WEB-INF/views/admin/chatMy.jsp"/>
+    </definition>
+
+    <definition name="chat" extends="template">
+        <put-attribute name="body" value="/WEB-INF/views/chat.jsp"/>
+    </definition>
+    <!-- /Admin -->
 
 </tiles-definitions>
