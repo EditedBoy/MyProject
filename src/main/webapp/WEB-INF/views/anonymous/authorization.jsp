@@ -36,6 +36,10 @@
                             <input type="password" name="j_password" placeholder="Password" />
                         </li>
                         <li>
+                            <label><input type="checkbox" id="rememberme" name="remember-me"> Remember Me</label>
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                        </li>
+                        <li>
                             <input type="submit" formaction="${loginUrl}" value="Login" class="button" />
                         </li>
                     </ul>
