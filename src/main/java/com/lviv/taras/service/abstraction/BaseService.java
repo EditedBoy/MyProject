@@ -11,4 +11,5 @@ public interface BaseService<T> {
 
     T getOne(Long id);
 
+    List<T> findAll(Iterable<Long> ids);
 }
