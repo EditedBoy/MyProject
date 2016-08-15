@@ -19,4 +19,6 @@ buildNumber.properties
 .settings/
 MyProject.iml
 src/main/resources/data.sql
-
+.gitignore
+/sonar-project.properties
+/.sonar/
